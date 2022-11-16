@@ -28,6 +28,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic();
     }
 
+    /**
+     *
+     * JDBC authentication
+     * @return
+     */
     @Bean
     public UserDetailsService user(DataSource dataSource){
         return new JdbcUserDetailsManager(dataSource);
